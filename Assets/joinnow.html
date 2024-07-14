@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    .form-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .user-input-box,
+    .gender-details-box,
+    .form-submit-btn {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .gender-category {
+      display: flex;
+      gap: 10px;
+    }
+    .form-submit-btn {
+      text-align: center;
+    }
+    .form-submit-btn input {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-submit-btn input:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="form-title">Join Now</h1>
+  <form action="/joinnow" method="POST">
+    <div class="main-user-info">
+      <div class="user-input-box">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" required>
+      </div>
+      <div class="user-input-box">
+        <label for="Aadhaarcard">Aadhaarcard Number</label>
+        <input type="text" id="Aadhaarcard" name="Aadhaarcard" placeholder="Enter Aadhaarcard no." required>
+      </div>
+      <div class="user-input-box">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+      </div>
+      <div class="user-input-box">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number" required>
+      </div>
+      <div class="user-input-box">
+        <label for="weight">Weight in kg's</label>
+        <input type="number" id="weight" name="weight" placeholder="Enter Weight" required>
+      </div>
+      <div class="user-input-box">
+        <label for="options">Choose Plan</label>
+        <select id="options" name="options" required>
+          <option value="option1">Basic Package</option>
+          <option value="option2">Premium Package</option>
+          <option value="option3">Diamond Package</option>
+        </select>
+      </div>
+    </div>
+    <div class="gender-details-box">
+      <span class="gender-title">Gender</span>
+      <div class="gender-category">
+        <input type="radio" name="gender" id="male" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" required>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="other" value="other" required>
+        <label for="other">Other</label>
+      </div>
+    </div>
+    <div class="form-submit-btn">
+      <input type="submit" value="Register">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
